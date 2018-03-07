@@ -31,6 +31,7 @@ body {
 .tab-content{
     padding: 15px;
 }
+
 #calendar {
     max-width: 700px;
     margin: 0 auto;
@@ -73,11 +74,26 @@ p.divider span.divider {
 }
 
 .card-header{
-    background-color: rgb(131, 85, 142);
+    background-color: rgb(163, 163, 163);
 }
 
-.btn-link {
+.btn-light {
     color: #ffffff;
+    background-color: transparent;
+    border: 0px;
+}
+button.btn-light:hover{
+    background-color: transparent;
+    border: transparent;
+}
+button.btn-light.focus, .btn-light:focus {
+    outline: transparent;
+    border: transparent;
+}
+
+.corBtn{
+    background-color: #5A1F76;
+    color: #FFFFFF;
 }
 
 .badgeCustom {
@@ -90,8 +106,17 @@ p.divider span.divider {
     vertical-align: baseline;
     border-radius: .25rem;
     margin-bottom: 5px;
-    background-color: rgb(131, 85, 142);
+    background-color: #5A1F76;
 }
 /*.card-form{
     width: fit-content;
 }*/
+
+.cardformat{
+    margin-left: 145.250px;
+    margin-right: 145.250px;
+}
+
+.material-icons{
+    color: black;
+}
