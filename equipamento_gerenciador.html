@@ -12,6 +12,7 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="style_otavio.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
@@ -20,6 +21,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 
+  <script>
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    })
+  </script>
 </head>
 
 <body>
@@ -29,17 +35,15 @@
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <ul class="navbar-nav mr-auto">
       <!--li class="nav-item">
         <a class="nav-link" href="#">Equipamento</a>
       </li-->
       <li class="nav-item">
-        <a class="nav-link" href="index.html">Reservas </a>
+        <a class="nav-link" href="reservas_gerenciador.html">Reservas </a>
       </li>
-
       <li class="nav-item">
-        <a class="nav-link" href="equipamento.html">Equipamentos</a>
+        <a class="nav-link" href="equipamento_gerenciador.html">Equipamentos</a>      
       </li>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown">
@@ -48,9 +52,9 @@
             Relatórios
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="relatorio_equipamento.html">Equipamentos</a>
-            <a class="dropdown-item" href="#">Reservas </a>
-          </div>
+              <a class="dropdown-item" href="relatorio_equipamentos_gerenciador.html">Equipamentos</a>
+              <a class="dropdown-item" href="relatorio_reservas_gerenciador.html">Reservas </a>
+            </div>
           <li>
       </ul>
     </ul>
@@ -70,33 +74,43 @@
           </div>
           <li>
       </ul>
-
     </form>
   </nav>
 
   <div class="container">
-
     <h2 style="margin-top:20px;margin-bottom:20px;">Equipamentos</h2>
-
-
-    <table class="table"  style="text-align: center;">
+    <table class="table" style="text-align: center;">
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Nome Equipamento<br><input type="text" style="margin-top:5px;"/></th>
-          <th scope="col">Registro<br><input type="text"style="margin-top:5px;" /></th>
-          <th scope="col">Modelo<br><input type="text"style="margin-top:5px;" /></th>
-          <th scope="col">Tipo<br><input type="text"style="margin-top:5px;" /></th>
-          <th scope="col">Situação<br>
+          <th scope="col">Nome Equipamento
+            <br>
+            <input type="text" style="margin-top:5px;" />
+          </th>
+          <th scope="col">Registro
+            <br>
+            <input type="text" style="margin-top:5px;" />
+          </th>
+          <th scope="col">Modelo
+            <br>
+            <input type="text" style="margin-top:5px;" />
+          </th>
+          <th scope="col">Tipo
+            <br>
+            <input type="text" style="margin-top:5px;" />
+          </th>
+          <th scope="col">Situação
+            <br>
             <select style="margin-top:5px;">
               <option selected>Todos</option>
               <option>Disponível</option>
               <option>Não disponível</option>
-            </select></th>
+            </select>
+          </th>
+          <th scope="col"></th>
         </tr>
       </thead>
       <tbody>
-       
         <tr>
           <th scope="row">1</th>
           <td>Plataforma Elevatória</td>
@@ -108,6 +122,9 @@
               <option>Disponível</option>
               <option>Não disponível</option>
             </select>
+          </td>
+          <td class="pointer">
+            <i class="fas fa-clipboard-list" data-toggle="tooltip" title="Mais detalhes"></i>
           </td>
         </tr>
         <tr>
@@ -122,10 +139,60 @@
               <option selected>Não disponível</option>
             </select>
           </td>
+          <td class="pointer" data-toggle="modal" data-target="#exampleModal">
+            <i class="fas fa-clipboard-list" data-toggle="tooltip" title="Mais detalhes"></i>
+          </td>
         </tr>
-
     </table>
+  </div>
 
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Mais detalhes</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <label>
+            Nome Equipamento: Plataforma Elevatória
+          </label>
+          <br>
+          <label>
+            Registro: 150212
+          </label>
+          <br>
+          <label>
+            Modelo: Tesoura
+          </label>
+          <br>
+          <label>
+            Tipo: Plataforma Elevatória
+          </label>
+          <br>
+          <label>
+            Situação: Disponível
+          </label>
+          <br><br>
+          <label>
+            Onde e com quem a chave se encontra: Supervisor da Aciária
+          </label>
+
+          <label>
+            Equipamento está em uso por: Ciclano da Silva
+          </label>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <!--button type="button" class="btn btn-primary">Save changes</button-->
+        </div>
+      </div>
+    </div>
   </div>
 
 </body>

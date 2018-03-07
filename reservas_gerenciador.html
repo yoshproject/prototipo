@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Projeto</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="style_otavio.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <script>
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    })
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light ">
+    <a class="navbar-brand" style="color:white" href="#">CTRL+</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul class="navbar-nav mr-auto">
+      <!--li class="nav-item">
+              <a class="nav-link" href="#">Equipamento</a>
+            </li-->
+      <li class="nav-item">
+        <a class="nav-link" href="reservas_gerenciador.html">Reservas </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="equipamento_gerenciador.html">Equipamentos</a>
+      </li>
+
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a style="color:white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Relatórios
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="relatorio_equipamentos_gerenciador.html">Equipamentos</a>
+            <a class="dropdown-item" href="relatorio_reservas_gerenciador.html">Reservas </a>
+          </div>
+          <li>
+      </ul>
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a style="color:white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Nome Usuario
+          </a>
+          <div class="dropdown-menu" style="margin-left:-80px;" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Outro</a>
+            <a class="dropdown-item" href="#">Alterar Senha</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Sair</a>
+          </div>
+          <li>
+      </ul>
+
+    </form>
+  </nav>
+
+  <div class="container">
+    <h2 style="margin-top:20px;margin-bottom:20px;">Reservas</h2>
+
+    <div class="row">
+    </div>
+    <div>
+      <table class="table" style="text-align: center;">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome Solicitante
+              <br>
+              <input type="text" style="margin-top:5px;" />
+            </th>
+            <th scope="col">Equipamento
+              <br>
+              <input type="text" style="margin-top:5px;" />
+            </th>
+            <th scope="col">Registro
+              <br>
+              <input type="text" style="margin-top:5px;" />
+            </th>
+            <th scope="col" style="padding-bottom:45px;">Data Inicial
+              <i class="fas fa-arrow-up"></i>
+            </th>
+            <th scope="col" style="padding-bottom:45px;">Data Final
+              <i class="fas fa-arrow-up"></i>
+            </th>
+            <th scope="col">Status
+              <br>
+              <select style="margin-top:5px;">
+                <option selected>Todos</option>
+                <option>Em análise</option>
+                <option>Aprovado</option>
+                <option>Não Aprovado</option>
+                <option>Cancelado</option>
+                <option>Concluído</option>
+              </select>
+              <th scope="col"></th>
+              <th scope="col"></th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Ciclano da Silva</td>
+            <td>Plataforma Elevatória</td>
+            <td>150212</td>
+            <td>01/09/2018 12:20</td>
+            <td>01/09/2018 13:20</td>
+            <td>Em análise</td>
+            <td class="pointer" data-toggle="modal" data-target="#exampleModal">
+              <i class="fas fa-clipboard-list" data-toggle="tooltip" title="Mais detalhes"></i>
+            </td>
+            <td class="pointer" data-toggle="modal" data-target="#editarReserva">
+              <i class="fas fa-edit" data-toggle="tooltip" title="Editar"></i>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Fulano de Tal</td>
+            <td>Plataforma Elevatória</td>
+            <td>202030</td>
+            <td>01/09/2018 13:20</td>
+            <td>01/09/2018 14:20</td>
+            <td>Em análise</td>
+            <td class="pointer" data-toggle="modal" data-target="#exampleModal">
+              <i class="fas fa-clipboard-list" data-toggle="tooltip" title="Mais detalhes"></i>
+            </td>
+            <td class="pointer" data-toggle="modal" data-target="#editarReserva">
+              <i class="fas fa-edit" data-toggle="tooltip" title="Editar"></i>
+            </td>
+          </tr>
+
+      </table>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Mais detalhes</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <label>
+              Nome Solicitante: Ciclano da Silva
+            </label>
+            <br>
+            <label>
+              Equipamento: Plataforma Elevatória
+            </label>
+            <br>
+            <label>
+              Registro: 150212
+            </label>
+            <br>
+            <label>
+              Data Inicial: 01/09/2018 12:20
+            </label>
+            <br>
+            <label>
+              Data Final: 01/09/2018 13:20
+            </label>
+            <br>
+            <label>
+              Status: Em análise
+            </label>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            <!--button type="button" class="btn btn-primary">Save changes</button-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="editarReserva" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Editar Reserva</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <label>
+              Status:
+              <select style="margin-top:5px;">
+                <option selected>Todos</option>
+                <option>Em análise</option>
+                <option>Aprovado</option>
+                <option>Não Aprovado</option>
+                <option>Concluído</option>
+              </select>
+            </label>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-primary"  data-dismiss="modal">Salvar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+
+</html>
