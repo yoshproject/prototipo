@@ -1,0 +1,36 @@
+nav{
+    background-color:#5A1F76;
+   
+}
+a.nav-link {
+    color: white !important;
+}
+body {
+    padding: 0;
+    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+    font-size: 14px;
+  }
+
+
+  table  tr:hover td{
+    background-color :lightgray;
+  }
+
+  .pointer {
+      cursor:pointer;
+  }
+
+  @media print {
+    .myDivToPrint {
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 15px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+}

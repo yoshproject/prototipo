@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="styleIvana.css">
+  <link rel="stylesheet" href="style-index-admin.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -20,15 +20,13 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 
-  <link href='lib/fullcalendar.min.css' rel='stylesheet' />
-  <link href='lib/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+  <link href='fullcalendar.min.css' rel='stylesheet' />
+  <link href='fullcalendar.print.min.css' rel='stylesheet' media='print' />
   <script src='lib/moment.min.js'></script>
   <script src='lib/jquery.min.js'></script>
-  <script src='lib/fullcalendar.min.js'></script>
+  <script src='fullcalendar.min.js'></script>
   <script>
-
     $(document).ready(function () {
-
       $('#calendar').fullCalendar({
         header: {
           left: 'prev,next today',
@@ -65,9 +63,7 @@
           }
         ]
       });
-
     });
-
   </script>
 
 </head>
@@ -81,23 +77,16 @@
 
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
-      <a class="nav-link" href="index.html">Home </a>
+      <a class="nav-link" href="index-admin.html">Home </a>
     </li>
-    <li class="nav-item dropdown">
-      <a style="color:white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-        Equipamentos
-      </a>
-      <div class="dropdown-menu" style="margin-left:-80px;" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="equipamento-admin.html">Novo Equipamento</a>
-        <a class="dropdown-item" href="manutenção.html">Manutenção</a>
-      </div>
+    <li class="nav-item">
+      <a class="nav-link" href="equipamento-admin.html">Equipamento</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="usuario-admin.html">Usuário</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Reserva</a>
+      <a class="nav-link" href="relatorios-admin.html">Reserva</a>
     </li>
 
   </ul>
@@ -121,114 +110,50 @@
 </nav>
 
 <body>
+  <h3 style="padding-top: 40px">Procure em todas as reservas </h3>
+
 
   <h3>Veja sua reservas agendadas</h3>
-
-    <div id="calendar"></div>  
-
-        <div class="row">
-          <div class="col">
-            <h5>Hoje - 07/03</h5>
-          </div>
-          <div class="pull-right">
-              <nav aria-label="..."> 
-                  <ul class="pagination">
-                    <li class="page-item disabled">
-                      <a class="page-link" href="#" tabindex="-1"><< </a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">>></a>
-                    </li>
-                  </ul>
-                </nav>
-          </div>
-         
-        </div>
-
-        <table class="table table-sm table-hover" style="padding-left:10px;width: 55%;">
-          <thead>
-            <tr>
-              <th scope="col">Nome</th>
-              <th scope="col">Telefone</th>
-              <th scope="col">Área
-                <i class="fas fa-filter"></i>
-              </th>
-              <th scope="col">Empresa
-                <i class="fas fa-filter"></i>
-              </th>
-              <th scope="col">User</th>
-              <th scope="col">Senha</th>
-              <th scope="col"></th>
-              <th scope="col"></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Maria da Silva</td>
-              <td>(31)995487126</td>
-              <td>Area 1</td>
-              <td>Empresa 2</td>
-              <td>mariasilva@email.com</td>
-              <td>teste123</td>
-              <td>
-                <a href="#">
-                  <i class="material-icons" style="padding:0px">delete</i>
-                </a>
-              </td>
-              <td>
-                <a href="#">
-                  <i class="material-icons">mode_edit</i>
-                </a>
-              </td>
-            </tr>
-
-            <tr>
-              <td>Joao Lucas Machado</td>
-              <td>(31)988169547</td>
-              <td>Area 3</td>
-              <td>Empresa 1</td>
-              <td>jlmachado@email.com</td>
-              <td>testando12</td>
-              <td>
-                <a href="#">
-                  <i class="material-icons" style="padding:0px">delete</i>
-                </a>
-              </td>
-              <td>
-                <a href="#">
-                  <i class="material-icons">mode_edit</i>
-                </a>
-              </td>
-            </tr>
-
-            <tr>
-              <td>Carla Pires</td>
-              <td>(31)987469235</td>
-              <td>Area 1</td>
-              <td>Empresa 1</td>
-              <td>carlap@email.com</td>
-              <td>teste321</td>
-              <td>
-                <a href="#">
-                  <i class="material-icons" style="padding:0px">delete</i>
-                </a>
-              </td>
-              <td>
-                <a href="#">
-                  <i class="material-icons">mode_edit</i>
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>      
-
   
 
+  <div class="card pull-left col-md-6" style="margin-left: 40px">
+      <div id="calendar">
+      </div>
+  </div>
+  
+  <div class="card pull-right col-md-5" style="margin-right: 40px">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Período</th>
+            <th scope="col">Equipamento</th>
+            <th scope="col">Status</th>
+            <th scope="col">Solicitante</th>
+            <td></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>8:30-12:00</td>
+            <td>Plataforma Elevatória</td>
+            <td>Em uso</td>
+            <td>Geraldo Dias</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>14:00-17:00</td>
+            <td>Plataforma Elevatória</td>
+            <td>Cancelada</td>
+            <td>Márcia Souza</td>
+            <td>
+              <button type="button" class="btn btn-light btn-sm">+ Reserva</button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+  </div>
 </body>
 
 </html>
