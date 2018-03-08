@@ -84,16 +84,128 @@
     </form>
   </nav>
 
-  <div>
-    <div style="width:350px;height:350px;margin:0 auto;float:left;">
+  <div class="container">
+
+      <div class="form-row align-self-center" style="margin-top:20px;">
+          <div class="col-md-2">
+            <label class="sr-only" for="inlineFormInputGroup">Username</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fa fa-calendar"></i>
+                </div>
+              </div>
+              <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" id="inlineFormInputGroup" placeholder="08/03/2018">
+            </div>
+          </div>
+  
+          <div class="col-md-2">
+            <label class="sr-only" for="inlineFormInputGroup">Username</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fa fa-calendar"></i>
+                </div>
+              </div>
+              <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" id="inlineFormInputGroup" placeholder="08/04/2018">
+            </div>
+          </div>
+
+          <div class="col-md-2">
+    
+              <a href="#" class="btn primary">
+                  <i class="material-icons">search</i>
+                </a>
+          </div>
+
+        </div>
+    
+    <div style="width:250px;height:250px;float:left;margin-top:30px">
       <canvas id="myChart"></canvas>
     </div>
 
-    <div style="float:right">
-      asdasd
+    <div style="float:left;margin-left:50px;margin-top:30px;">
+      <table>
+        <tr>
+          <td>
+          </td>
+          <td style="text-align:center">
+            <span style="margin-left:5px;">
+              <b>Equipamento </b>
+            </span>
+          </td>
+          <td style="padding-left:25px">
+            <b>Horas utilizadas no período</b>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div style="background-color:rgb(74, 172, 197);width:30px;height:8px;border-radius:7px 7px 7px 7px;"></div>
+          </td>
+          <td style="text-align:center">
+            <span style="margin-left:4px;font-size:13px">Plataforma Elevatória (157562) </span>
+          </td>
+          <td style="text-align:center">3 horas </td>
+        </tr>
+        <tr>
+          <td>
+            <div style="background-color:rgb(247, 150, 71);width:30px;height:8px;border-radius:7px 7px 7px 7px;"></div>
+          </td>
+          <td style="text-align:center">
+            <span style="margin-left:4px;font-size:13px">Plataforma Elevatória (524986)</span>
+          </td>
+          <td style="text-align:center">10 horas </td>
+        </tr>
+        <tr>
+          <td>
+            <div style="background-color:rgb(79, 129, 188);width:30px;height:8px;border-radius:7px 7px 7px 7px;"></div>
+          </td>
+          <td style="text-align:center">
+            <span style="margin-left:4px;font-size:13px">Plataforma Elevatória (468457) </span>
+          </td>
+          <td style="text-align:center">5 horas </td>
+        </tr>
+        <tr>
+          <td>
+            <div style="background-color:rgb(192, 80, 78);width:30px;height:8px;border-radius:7px 7px 7px 7px;"></div>
+          </td>
+          <td style="text-align:center">
+            <span style="margin-left:4px;font-size:13px">Plataforma Elevatória (955456) </span>
+          </td>
+          <td style="text-align:center">2 horas </td>
+        </tr>
+        <tr>
+          <td>
+            <div style="background-color:rgb(155, 187, 88);width:30px;height:8px;border-radius:7px 7px 7px 7px;"></div>
+          </td>
+          <td style="text-align:center">
+            <span style="margin-left:4px;font-size:13px">Plataforma Elevatória (345885)</span>
+          </td>
+          <td style="text-align:center">20 horas </td>
+        </tr>
+        <tr>
+          <td>
+            <div style="background-color:rgb(128, 100, 161);width:30px;height:8px;border-radius:7px 7px 7px 7px;"></div>
+          </td>
+          <td style="text-align:center">
+            <span style="margin-left:4px;font-size:13px">Plataforma Elevatória (234546) </span>
+          </td>
+          <td style="text-align:center">30 horas </td>
+        </tr>
+      </table>
+
+      <div style="margin-top:20px;">
+        <b>Total de horas no período:</b> 150 horas
+        <br>
+        <b> Total de horas de uso efetivo:</b> 20 horas
+      </div>
+
     </div>
   </div>
-  <div style="clear:both">
+
+  <div style="clear:both"></div>
+
+  <div style="margin-bottom:30px;"></div>
   <div class="container">
     <script>
       var ctx = document.getElementById('myChart').getContext('2d');
@@ -103,13 +215,13 @@
 
         // The data for our dataset
         data: {
-          labels: ["January", "February", "March", "April", "May", "June", "July"],
+          labels: ["Plataforma Elevatória", "Guindaste", "Empilhadeira", "Trator", "Caminhão", "Betoneira"],
           datasets: [{
             label: "My First dataset",
-            backgroundColor: ['rgb(3, 1, 132)', 'rgb(3, 2, 5)', 'rgb(3, 3, 132)', 'rgb(77, 4, 132)', 'rgb(99, 6, 132)', 'rgb(255, 6,432)',
-              'rgb(4255, 7, 4)'],
-            borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45]
+            backgroundColor: ['rgb(74, 172, 197)', 'rgb(247, 150, 71)', 'rgb(79, 129, 188)', 'rgb(192, 80, 78)', 'rgb(155, 187, 88)'
+              , 'rgb(128, 100, 161)'],
+            borderColor: ['rgb(250,250,250,0)'],
+            data: [3, 10, 5, 2, 20, 30]
 
           }]
         },
