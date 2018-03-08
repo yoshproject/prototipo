@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Projeto</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="style-usuario-admin.css">
+  <link rel="stylesheet" href="lib/selectize.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="lib/selectize.js"></script>
+
+</head>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light ">
+  <a class="navbar-brand" style="color:white" href="#">CTRL+</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+      <a class="nav-link" href="index-admin.html">Home </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="equipamento.html">Equipamento</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Usuário</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="relatorios-admin.html">Reservas</a>
+    </li>
+
+  </ul>
+
+  <form class="form-inline my-2 my-lg-0">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a style="color:white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Nome Usuario
+        </a>
+        <div class="dropdown-menu" style="margin-left:-80px;" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Outro</a>
+          <a class="dropdown-item" href="#">Alterar Senha</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Sair</a>
+        </div>
+        <li>
+    </ul>
+  </form>
+</nav>
+
+<body>
+    <div class="testetable col-md-10 item-center">
+        <div class="row">
+            <div class="col">
+            <h3>Alterar dados</h3>
+            </div>
+            <div class="col-8"></div>
+            <div class="col"></div>
+        </div>
+    
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="exampleNome">Nome</label>
+                    <input class="form-control" type="text" id="exampleNome" placeholder="Usuario" readonly>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="exampleTelefone">Telefone</label>
+                    <input class="form-control" type="tel" id="exampleTelefone" placeholder="DD 995478963">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="exampleEmpresa">Empresa</label>
+                    <select id="exampleEmpresa"class="form-control" placeholder="Selecionar Empresa" readonly>
+                        <option value="0">Selecionar</option>
+                        <option value="1" selected>Empresa 1</option>
+                        <option value="2">Empresa 2</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="examplreArea">Área</label>
+                    <select id="examplreArea" class="form-control" placeholder="">
+                    <option value="0">Selecionar</option>
+                    <option value="1" selected>Área 1</option>
+                    <option value="2">Área 2</option>
+                </select>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="exampleEmail">Username</label>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                        <div class="input-group-text">@</div>
+                        </div>
+                        <input type="text" class="form-control" id="exampleEmail" placeholder="usuario@gmail.com">
+                    </div>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="exampleSenha">Senha</label>
+                    <input class="form-control" type="password" id="exampleSenha" placeholder="teste">
+                </div>
+            </div>
+        </form>
+        <button type="submit" class="btn corBtn pull-right" style="margin-bottom:10px">Alterar</button>
+    </div>
+</body>
+
+<script>
+  $('#select-beast-res').selectize({
+    create: true,
+    sortField: 'text'
+  });
+  $('#select-beast-tipo').selectize({
+    create: true,
+    sortField: 'text'
+  });
+</script>
+
+
+</html>
