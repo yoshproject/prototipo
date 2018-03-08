@@ -26,6 +26,9 @@
       $('#myInput').trigger('focus')
     })
   </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
 </head>
 
 <body>
@@ -81,35 +84,60 @@
     </form>
   </nav>
 
+  <div>
+    <div style="width:350px;height:350px;margin:0 auto;float:left;">
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <div style="float:right">
+      asdasd
+    </div>
+  </div>
+  <div style="clear:both">
   <div class="container">
+    <script>
+      var ctx = document.getElementById('myChart').getContext('2d');
+      var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'pie',
+
+        // The data for our dataset
+        data: {
+          labels: ["January", "February", "March", "April", "May", "June", "July"],
+          datasets: [{
+            label: "My First dataset",
+            backgroundColor: ['rgb(3, 1, 132)', 'rgb(3, 2, 5)', 'rgb(3, 3, 132)', 'rgb(77, 4, 132)', 'rgb(99, 6, 132)', 'rgb(255, 6,432)',
+              'rgb(4255, 7, 4)'],
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45]
+
+          }]
+        },
+
+        // Configuration options go here
+        options: { legend: { position: 'right', display: false } }
+
+      });
+    </script>
     <h2 style="margin-top:20px;margin-bottom:20px;">Equipamentos</h2>
     <table class="table" style="text-align: center;">
       <thead>
         <tr>
           <th scope="col">#</th>
           <th scope="col">Nome Equipamento
-            <br>
-            <input type="text" style="margin-top:5px;" />
+            <i class="fas fa-filter"></i>
           </th>
           <th scope="col">Registro
-            <br>
-            <input type="text" style="margin-top:5px;" />
+            <i class="fas fa-filter"></i>
           </th>
           <th scope="col">Modelo
-            <br>
-            <input type="text" style="margin-top:5px;" />
+            <i class="fas fa-filter"></i>
           </th>
           <th scope="col">Tipo
-            <br>
-            <input type="text" style="margin-top:5px;" />
+            <i class="fas fa-filter"></i>
           </th>
           <th scope="col">Situação
-            <br>
-            <select style="margin-top:5px;">
-              <option selected>Todos</option>
-              <option>Disponível</option>
-              <option>Não disponível</option>
-            </select>
+            <i class="fas fa-filter"></i>
           </th>
           <th scope="col"></th>
         </tr>
@@ -127,7 +155,7 @@
               <option>Não disponível</option>
             </select>
           </td>
-          <td class="pointer"  data-toggle="modal" data-target="#exampleModal">
+          <td class="pointer" data-toggle="modal" data-target="#exampleModal">
             <i class="fas fa-clipboard-list" data-toggle="tooltip" title="Mais detalhes"></i>
           </td>
         </tr>
