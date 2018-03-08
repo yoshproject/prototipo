@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Projeto</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="styleIvana.css">
+    <link rel="stylesheet" href="lib/selectize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="lib/selectize.js"></script>
+
+</head>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light ">
+    <a class="navbar-brand" style="color:white" href="#">CTRL+</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="index-admin.html">Home </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a style="color:white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Equipamentos
+            </a>
+            <div class="dropdown-menu" style="margin-left:-80px;" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="equipamento-admin.html">Novo Equipamento</a>
+                <a class="dropdown-item" href="manutenção.html">Manutenção</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Usuário</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Reserva</a>
+        </li>
+
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a style="color:white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Nome Usuario
+                </a>
+                <div class="dropdown-menu" style="margin-left:-80px;" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Outro</a>
+                    <a class="dropdown-item" href="#">Alterar Senha</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Sair</a>
+                </div>
+                <li>
+        </ul>
+    </form>
+</nav>
+
+<body>
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10 ">
+            <div class="card-manu">
+                <div class="card-header-manu" id="headingOne">
+                    <h5 class="titulo">Manutenção
+                        <small class="text-muted">Pesquise equipamentos em manutenção</small>
+                    </h5>
+                </div>
+                <form class="form-manu">
+                    <div class="form-row align-self-center">
+                        <div class="col-md-2">
+                            <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask id="inlineFormInputGroup" placeholder="Data Inicial">
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask id="inlineFormInputGroup" placeholder="Data Final">
+                            </div>
+                        </div>
+
+                        <label for="example-text-input" class="col-form-label">Tipo</label>
+                        <div class="col-2">
+                            <select id="select-manu-tipo" class="demo-default" placeholder="">
+                                <option value=""></option>
+                                <optgroup label="Empresa/Setor 1">
+                                    <option value="1">Chuck Testa</option>
+                                    <option value="4">Sage Cattabriga-Alosa</option>
+                                </optgroup>
+                                <optgroup label="Empresa/Setor 2">
+                                    <option value="3">Nikola Tesla</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="col-md-2">
+                            <a href="#" class="btn primary">
+                                <i class="material-icons">search</i>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <!--Tabela de Manutenção -->
+
+            <div class="testetable col-md-10 item-center">
+
+                    <div class="row">
+                      <div class="col">
+                        <h3>Equipamentos em manutenção</h3>
+                      </div>
+                      <div class="col-8"></div>
+                      <div class="col">
+                      </div>
+                    </div>
+                
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th scope="col">Nome</th>
+                          <th scope="col">Telefone</th>
+                          <th scope="col">Área <i class="fas fa-filter"></i></th>
+                          <th scope="col">Empresa <i class="fas fa-filter"></i></th>
+                          <th scope="col">User</th>
+                          <th scope="col">Senha</th>
+                          <th scope="col"></th>
+                          <th scope="col"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Maria da Silva</td>
+                          <td>(31)995487126</td>
+                          <td>Area 1</td>
+                          <td>Empresa 2</td>
+                          <td>mariasilva@email.com</td>
+                          <td>teste123</td>
+                          <td>
+                              <a href="#" >
+                                  <i class="material-icons" style="padding:0px">delete</i>
+                              </a>
+                          </td>
+                          <td>
+                              <a href="#" >
+                                  <i class="material-icons">mode_edit</i>
+                              </a>
+                          </td>
+                        </tr>
+                
+                        <tr>
+                            <td>Joao Lucas Machado</td>
+                            <td>(31)988169547</td>
+                            <td>Area 3</td>
+                            <td>Empresa 1</td>
+                            <td>jlmachado@email.com</td>
+                            <td>testando12</td>
+                            <td>
+                                <a href="#" >
+                                    <i class="material-icons" style="padding:0px">delete</i>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#" >
+                                    <i class="material-icons">mode_edit</i>
+                                </a>
+                            </td>
+                        </tr>
+                
+                        <tr>
+                            <td>Carla Pires</td>
+                            <td>(31)987469235</td>
+                            <td>Area 1</td>
+                            <td>Empresa 1</td>
+                            <td>carlap@email.com</td>
+                            <td>teste321</td>
+                            <td>
+                                <a href="#" >
+                                    <i class="material-icons" style="padding:0px">delete</i>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#" >
+                                    <i class="material-icons">mode_edit</i>
+                                </a>
+                            </td>
+                        </tr>
+                
+                
+                      
+                
+                      </tbody>
+                    </table>
+
+            </div>
+        <div class="col-1"></div>
+    </div>
+</body>
+<script>
+    $('#select-beast-res').selectize({
+        create: true,
+        sortField: 'text'
+    });
+    $('#select-beast-tipo').selectize({
+        create: true,
+        sortField: 'text'
+    });
+    $('#select-manu-tipo').selectize({
+        create: true,
+        sortField: 'text'
+    });
+
+</script>
+
+
+</html>

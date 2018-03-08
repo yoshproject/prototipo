@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Projeto</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="styleIvana.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <link href='lib/fullcalendar.min.css' rel='stylesheet' />
+  <link href='lib/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+  <script src='lib/moment.min.js'></script>
+  <script src='lib/jquery.min.js'></script>
+  <script src='lib/fullcalendar.min.js'></script>
+  <script>
+
+    $(document).ready(function () {
+
+      $('#calendar').fullCalendar({
+        header: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'month'
+        },
+        defaultDate: '2018-03-12',
+        navLinks: true, // can click day/week names to navigate views
+        editable: true,
+        eventLimit: true, // allow "more" link when too many events
+        events: [
+          {
+            title: 'All Day Event',
+            start: '2018-03-01'
+          },
+          {
+            title: 'Long Event',
+            start: '2018-03-07',
+            end: '2018-03-10'
+          },
+          {
+            title: 'Conference',
+            start: '2018-03-11',
+            end: '2018-03-13'
+          },
+          {
+            title: 'Meeting',
+            start: '2018-03-12T10:30:00',
+            end: '2018-03-12T12:30:00'
+          },
+          {
+            title: 'Lunch',
+            start: '2018-03-12T12:00:00'
+          }
+        ]
+      });
+
+    });
+
+  </script>
+
+</head>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light ">
+  <a class="navbar-brand" style="color:white" href="#">CTRL+</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+      <a class="nav-link" href="index.html">Home </a>
+    </li>
+    <li class="nav-item dropdown">
+      <a style="color:white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Equipamentos
+      </a>
+      <div class="dropdown-menu" style="margin-left:-80px;" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="equipamento-admin.html">Novo Equipamento</a>
+        <a class="dropdown-item" href="manutenção.html">Manutenção</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="usuario-admin.html">Usuário</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Reserva</a>
+    </li>
+
+  </ul>
+
+  <form class="form-inline my-2 my-lg-0">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a style="color:white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Nome Usuario
+        </a>
+        <div class="dropdown-menu" style="margin-left:-80px;" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Outro</a>
+          <a class="dropdown-item" href="#">Alterar Senha</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Sair</a>
+        </div>
+        <li>
+    </ul>
+  </form>
+</nav>
+
+<body>
+
+  <h3>Veja sua reservas agendadas</h3>
+
+    <div id="calendar"></div>  
+
+        <div class="row">
+          <div class="col">
+            <h5>Hoje - 07/03</h5>
+          </div>
+          <div class="pull-right">
+              <nav aria-label="..."> 
+                  <ul class="pagination">
+                    <li class="page-item disabled">
+                      <a class="page-link" href="#" tabindex="-1"><< </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">>></a>
+                    </li>
+                  </ul>
+                </nav>
+          </div>
+         
+        </div>
+
+        <table class="table table-sm table-hover" style="padding-left:10px;width: 55%;">
+          <thead>
+            <tr>
+              <th scope="col">Nome</th>
+              <th scope="col">Telefone</th>
+              <th scope="col">Área
+                <i class="fas fa-filter"></i>
+              </th>
+              <th scope="col">Empresa
+                <i class="fas fa-filter"></i>
+              </th>
+              <th scope="col">User</th>
+              <th scope="col">Senha</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Maria da Silva</td>
+              <td>(31)995487126</td>
+              <td>Area 1</td>
+              <td>Empresa 2</td>
+              <td>mariasilva@email.com</td>
+              <td>teste123</td>
+              <td>
+                <a href="#">
+                  <i class="material-icons" style="padding:0px">delete</i>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  <i class="material-icons">mode_edit</i>
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Joao Lucas Machado</td>
+              <td>(31)988169547</td>
+              <td>Area 3</td>
+              <td>Empresa 1</td>
+              <td>jlmachado@email.com</td>
+              <td>testando12</td>
+              <td>
+                <a href="#">
+                  <i class="material-icons" style="padding:0px">delete</i>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  <i class="material-icons">mode_edit</i>
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Carla Pires</td>
+              <td>(31)987469235</td>
+              <td>Area 1</td>
+              <td>Empresa 1</td>
+              <td>carlap@email.com</td>
+              <td>teste321</td>
+              <td>
+                <a href="#">
+                  <i class="material-icons" style="padding:0px">delete</i>
+                </a>
+              </td>
+              <td>
+                <a href="#">
+                  <i class="material-icons">mode_edit</i>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>      
+
+  
+
+</body>
+
+</html>
