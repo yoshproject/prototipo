@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="style_otavio.css">
+  <link rel="stylesheet" href="style-usuario-admin.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 
@@ -28,8 +28,7 @@
   </script>
 </head>
 
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light ">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light ">
     <a class="navbar-brand" style="color:white" href="#">CTRL+</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
       aria-expanded="false" aria-label="Toggle navigation">
@@ -84,71 +83,160 @@
     </form>
   </nav>
 
-  <div class="container">
-    <h2 style="margin-top:20px;margin-bottom:20px;">Reservas</h2>
+<body>
 
-    <div class="row">
-    </div>
-    <div>
-      <table class="table" style="text-align: center;">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nome Solicitante
-              <i class="fas fa-filter"></i>
-            </th>
-            <th scope="col">Equipamento
-              <i class="fas fa-filter"></i>
-            </th>
-            <th scope="col">Registro
-              <i class="fas fa-filter"></i>
-            </th>
-            <th scope="col">Data Inicial
-              <i class="fas fa-arrow-up"></i>
-            </th>
-            <th scope="col">Data Final
-              <i class="fas fa-arrow-up"></i>
-            </th>
-            <th scope="col">Status
-              <i class="fas fa-filter"></i>
-            </th>
-            <th scope="col"></th>
-            <th scope="col"></th>
+    <div class="testetable col-md-12 item-center">
+        <div class="row">
+            <div class="col">
+                <h3>Reservas</h3>
+            </div>
+            <div class="col-10"></div>
+            <div class="col"></div>
+        </div>
 
-          </tr>
+        <table class="table table-hover" style="margin-top: 5px">
+            <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">Solicitante
+                    <i class="fas fa-filter"></i>
+                  </th>
+                  <th scope="col">Equipamento
+                    <i class="fas fa-filter"></i>
+                  </th>
+                  <th scope="col">Registro
+                    <i class="fas fa-filter"></i>
+                  </th>
+                  <th scope="col">Local
+                      <i class="fas fa-filter"></i>
+                    </th>
+                  <th scope="col">Data Inicial
+                    <i class="fas fa-filter"></i>
+                  </th>
+                  <th scope="col">Data Final
+                    <i class="fas fa-filter"></i>
+                  </th>
+                  <th scope="col">Horas
+                      <i class="fas fa-filter"></i>
+                    </th>
+                    <th scope="col">Centro de Custo
+                        <i class="fas fa-filter"></i>
+                      </th>
+                  <th scope="col">Status
+                    <i class="fas fa-filter"></i>
+                  </th>
+                  <th scope="col">Observação</th>
+                  <th scope="col"></th>
+            </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>Ciclano da Silva</td>
+            <td>Solicitante 1</td>
             <td>Plataforma Elevatória</td>
             <td>150212</td>
+            <td>Local 1</td>
             <td>01/09/2018 12:20</td>
             <td>01/09/2018 13:20</td>
-            <td>Em análise</td>
-            <td class="pointer" data-toggle="modal" data-target="#exampleModal">
-              <i class="fas fa-clipboard-list" data-toggle="tooltip" title="Mais detalhes"></i>
-            </td>
+            <td>1</td>
+            <td>Centro de custo x</td>
+            <td>Concluída</td>
+            <td>-</td>
             <td class="pointer" data-toggle="modal" data-target="#editarReserva">
-              <i class="fas fa-edit" data-toggle="tooltip" title="Editar"></i>
-            </td>
+                <i class="material-icons" data-toggle="tooltip" title="Editar">mode_edit</i>
+              </td>
+              <td>
+                  <a href="#" >
+                      <i class="material-icons" style="padding:0px">delete</i>
+                  </a>
+              </td>
           </tr>
+          
           <tr>
-            <th scope="row">2</th>
-            <td>Fulano de Tal</td>
-            <td>Plataforma Elevatória</td>
-            <td>202030</td>
-            <td>01/09/2018 13:20</td>
-            <td>01/09/2018 14:20</td>
-            <td>Em análise</td>
-            <td class="pointer" data-toggle="modal" data-target="#exampleModal">
-              <i class="fas fa-clipboard-list" data-toggle="tooltip" title="Mais detalhes"></i>
-            </td>
-            <td class="pointer" data-toggle="modal" data-target="#editarReserva">
-              <i class="fas fa-edit" data-toggle="tooltip" title="Editar"></i>
-            </td>
-          </tr>
-
+              <th scope="row">2</th>
+              <td>Solicitante 2</td>
+              <td>Plataforma Elevatória</td>
+              <td>150212</td>
+              <td>Local 1</td>
+              <td>01/09/2018 12:20</td>
+              <td>01/09/2018 13:20</td>
+              <td>1</td>
+              <td>Centro de custo x</td>
+              <td>Cancelada</td>
+              <td>Equipamento danificado</td>
+              <td class="pointer" data-toggle="modal" data-target="#editarReserva">
+                  <i class="material-icons" data-toggle="tooltip" title="Editar">mode_edit</i>
+                </td>
+                <td>
+                    <a href="#" >
+                        <i class="material-icons" style="padding:0px">delete</i>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Solicitante 3</td>
+              <td>Plataforma Elevatória</td>
+              <td>150212</td>
+              <td>Local 1</td>
+              <td>01/09/2018 12:20</td>
+              <td>01/09/2018 13:20</td>
+              <td>1</td>
+              <td>Centro de custo x</td>
+              <td>Concluída</td>
+              <td>-</td>
+              <td class="pointer" data-toggle="modal" data-target="#editarReserva">
+                  <i class="material-icons" data-toggle="tooltip" title="Editar">mode_edit</i>
+                </td>
+                <td>
+                    <a href="#" >
+                        <i class="material-icons" style="padding:0px">delete</i>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Solicitante 4</td>
+              <td>Plataforma Elevatória</td>
+              <td>150212</td>
+              <td>Local 1</td>
+              <td>01/09/2018 12:20</td>
+              <td>01/09/2018 13:20</td>
+              <td>1</td>
+              <td>Centro de custo x</td>
+              <td>Cancelada</td>
+              <td>Equipamento danificado</td>
+              <td class="pointer" data-toggle="modal" data-target="#editarReserva">
+                  <i class="material-icons" data-toggle="tooltip" title="Editar">mode_edit</i>
+                </td>
+                <td>
+                    <a href="#" >
+                        <i class="material-icons" style="padding:0px">delete</i>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>Solicitante 5</td>
+              <td>Plataforma Elevatória</td>
+              <td>135880</td>
+              <td>Local 2</td>
+              <td>01/09/2018 12:20</td>
+              <td>01/09/2018 13:20</td>
+              <td>1</td>
+              <td>Centro de custo y</td>
+              <td>Concluída</td>
+              <td>-</td>
+              <td class="pointer" data-toggle="modal" data-target="#editarReserva">
+                  <i class="material-icons" data-toggle="tooltip" title="Editar">mode_edit</i>
+                </td>
+                <td>
+                    <a href="#" >
+                        <i class="material-icons" style="padding:0px">delete</i>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
       </table>
     </div>
 
