@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="../styleIvana.css">
+  <link rel="stylesheet" href="../style-usuario-admin.css">
   <link rel="stylesheet" href="lib/selectize.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
@@ -36,10 +36,10 @@
       <a class="nav-link" href="index_admin.html">Home </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="equipamento_admin.html">Equipamentos</a>
+      <a class="nav-link" href="#">Equipamentos</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="empresas_admin.html">Empresas</a>
+      <a class="nav-link" href="empresa_admin.html">Empresas</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="usuario_admin.html">Usuários</a>
@@ -70,13 +70,104 @@
 </nav>
 
 <body>
+    <div id="accordion">
+        <div class="card cardformat">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <a class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"
+               role="button"> 
+               <h5>Cadastro Equipamento</h5><small class="text-muted">Formulário de cadastro de novos equipamentos</small>
+               <i class="material-icons pull-right">keyboard_arrow_down</i></a>
+            </h5>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                <form>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="exampleTelefone">Equipamento</label>
+                            <input class="form-control" type="tel" id="exampleTelefone" placeholder="DD 9XXXX-XXXX">
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="exampleTelefone">Registro</label>
+                            <input class="form-control" type="tel" id="exampleTelefone" placeholder="DD 9XXXX-XXXX">
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="exampleTelefone">Modelo</label>
+                            <input class="form-control" type="tel" id="exampleTelefone" placeholder="DD 9XXXX-XXXX">
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="exampleTipo">Tipo</label>
+                            <select id="exampleTipo" class="form-control" placeholder="">
+                                <option value="0" selected>Selecionar</option>
+                                <option value="1">Tipo 1</option>
+                                <option value="2">Tipo 2</option>
+                          </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group col-md-3">
+                            <label for="exampleEmpresa">Situação</label>
+                            <select id="exampleEmpresa" class="form-control" placeholder="" readonly>
+                                    <option value="0" >Selecionar</option>
+                                    <option value="1" serlected>Desponivel</option>
+                                    <option value="2">Manutencao</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="exampleCDC">Centro de Custo</label>
+                            <select id="exampleCDC" class="form-control" placeholder="">
+                                <option value="0" selected>Selecionar</option>
+                                <option value="1">Centro de custo 1</option>
+                                <option value="2">Centro de custo 2</option>
+                          </select>
+                        </div>
+
+                      <div class="form-group col-md-3">
+                          <label for="exampleNome">Responsavel</label>
+                          <select id="exampleNome" class="form-control" placeholder="">
+                              <option value="0" selected>Selecionar</option>
+                              <option value="1">Responsavel 1</option>
+                              <option value="2">Responsavel 2</option>
+                        </select>
+                      </div>
+
+
+                      <div class="form-group col-md-3">
+                            <label for="exampleEmpresa">Empresa</label>
+                            <select id="exampleEmpresa" class="form-control" placeholder="">
+                                    <option value="0" selected>Selecionar</option>
+                                    <option value="1">Empresa 1</option>
+                                    <option value="2">Emprsa 2</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </form>
+                <button type="submit" class="btn corBtn pull-right" style="margin-bottom:10px">Cadastrar</button>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+
   <div class="row">
     <div class="col-1"></div>
     <div class="col-md-10">
       <div class="card">
         <div class="card-header" id="headingOne">
 
-          <h5 class="titulo">Novo Equipamento
+          <h5 class="titulo">Cadastrar Equipamento
             <small class="text-muted">Formulário de cadastro de novos equipamentos</small>
             <button class="btn btn-light btn-header-form" data-toggle="collapse" data-target="#collapseOne" aria-controls="collapseOne">
               <i class="fa fa-angle-down"></i>
