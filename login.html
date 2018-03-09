@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="login.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        
+
+    <script type="text/javascript">	
+        function valida_envio(){
+            var valorEmail = document.getElementById("inputEmail").value;
+            var formulario  = document.getElementById("formulario");
+            if( valorEmail.length > 1 ){
+                if(valorEmail === "admin@email.com"){
+                    window.location.href = "administrador/index_admin.html";
+                }
+                if(valorEmail === "gerenciador@email.com"){
+                    window.location.href = "gerenciador/home_gerenciador.html";
+                }
+                if(valorEmail === "solicitante@email.com"){
+                    window.location.href = "solicitante/reserva-solicitante.html";
+                }
+
+            }else{
+               alert("Preencha o campo");
+            }
+          }
+        
+    </script>
+
+</head>
+
+
+
+<body class="text-center">
+    <form class="form-signin" id="formulario">
+        <!--img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"-->
+        <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+        <br>
+        <label for="inputEmail" class="sr-only">Usuário</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Usuário" required autofocus>
+        <label for="inputPassword" class="sr-only">Senha</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+        <br>
+        <button class="btn btn-lg btn-block" style="background-color:#5A1F76; color:white" type="submit" value="Enviar" onClick="valida_envio()">Entrar</button>
+        <p class="mt-5 mb-3 text-muted">&copy;2018</p>
+    </form>
+</body>
+
+</html>
