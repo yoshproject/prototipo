@@ -81,6 +81,11 @@ button.btn-light.focus, .btn-light:focus {
     color: #FFFFFF;
 }
 
+.corBtnCancelar{
+    background-color: rgb(163, 163, 163);
+    color: #FFFFFF;
+}
+
 .badgeCustom {
     display: inline-block;
     padding: .25em .4em;
