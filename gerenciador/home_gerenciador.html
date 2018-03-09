@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="style_otavio.css">
+  <link rel="stylesheet" href="../style-usuario-admin.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -21,58 +21,63 @@
     crossorigin="anonymous"></script>
 </head>
 
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light ">
-    <a class="navbar-brand" style="color:white" href="#">CTRL+</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <ul class="navbar-nav mr-auto">   
+<nav class="navbar fixed-top navbar-expand-lg navbar-light ">
+  <a class="navbar-brand" style="color:white" href="#">CTRL+</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <ul class="navbar-nav mr-auto">
 
-      <li class="nav-item">
-        <a class="nav-link" href="home_gerenciador.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="reservas_gerenciador.html">Reservas</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="equipamentos_gerenciador.html">Equipamentos</a>
-      </li>
+    <li class="nav-item">
+      <a class="nav-link" href="home_gerenciador.html">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="reservas_gerenciador.html">Reservas</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="equipamento_gerenciador.html">Equipamentos</a>
+    </li>
 
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item dropdown">
-          <a style="color:white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Relatórios
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="relatorio_equipamentos_gerenciador.html">Equipamentos</a>
-            <a class="dropdown-item" href="relatorio_reservas_gerenciador.html">Reservas </a>
-          </div>
-          <li>
-      </ul>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a style="color:white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Relatórios
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="relatorio_equipamentos_gerenciador.html">Equipamentos</a>
+          <a class="dropdown-item" href="relatorio_reservas_gerenciador.html">Reservas </a>
+        </div>
+        <li>
     </ul>
+  </ul>
 
-    <form class="form-inline my-2 my-lg-0">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item dropdown">
-          <a style="color:white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Nome Usuario
-          </a>
-          <div class="dropdown-menu" style="margin-left:-80px;" aria-labelledby="navbarDropdown">            
-            <a class="dropdown-item" href="alterarSenha_gerenciador.html">Alterar Senha</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Sair</a>
-          </div>
-          <li>
-      </ul>
-    </form>
-  </nav>
+  <form class="form-inline my-2 my-lg-0">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a style="color:white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Nome Usuario
+        </a>
+        <div class="dropdown-menu" style="margin-left:-80px;" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="alterarSenha_gerenciador.html">Alterar Dados</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="../login.html">Sair</a>
+        </div>
+        <li>
+    </ul>
+  </form>
+</nav>
+
+<body>
+  
   <div class="container">
+
     <div class="form-row col-md-12" style="margin-top: 28px">
-      <div class="form-row col-md-6" style=" height: 500px">
+
+      <div class="form-row col-md-6" >
+
         <div class="card card-home">
           <div class="card-header">
             <h3>Novas Solicitações</h3>
@@ -155,7 +160,7 @@
               </a>
             </div>
             <div class="card-footer text-muted text-center">
-              <button class="btn btn-light">Carregar mais</button>
+              <button class="btn corBtnCarregar">Carregar mais</button>
             </div>
           </div>
         </div>
@@ -245,11 +250,12 @@
               </a>
             </div>
             <div class="card-footer text-muted text-center">
-              <button class="btn btn-light">Carregar mais</button>
+              <button class="btn corBtnCarregar">Carregar mais</button>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 
@@ -268,8 +274,8 @@
             <div class="container">
               <div class="input-group-sm" style="margin-bottom: 10px;">
                 <label for="inputSolicitante">Nome</label>
-                <input id="inputSolicitante" type="text" value="Fábio Oliveira" class="form-control" style="width: 200px" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
-                  disabled>
+                <input id="inputSolicitante" type="text" value="Fábio Oliveira" class="form-control" style="width: 200px" aria-label="Small"
+                  aria-describedby="inputGroup-sizing-sm" disabled>
               </div>
               <div class="input-group-sm" style="margin-bottom: 10px;">
                 <label for="inputRegistro">Registro</label>
@@ -294,10 +300,13 @@
               <div class="input-group input-group-sm mb-2 col-8" style="margin-bottom: 10px; padding-left: 0px">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="inputGroup-sizing-sm">
-                    <a id="aData" href="#" style="color: black"><i class="fa fa-calendar"></i></a>
+                    <a id="aData" href="#" style="color: black">
+                      <i class="fa fa-calendar"></i>
+                    </a>
                   </span>
                 </div>
-                <input id="inputData" type="text" class="form-control" value="25/03/2018 14:30:00 - 17:00:00" style="width: 100px" aria-label="Small" aria-describedby="inputGroup-sizing-sm" disabled>
+                <input id="inputData" type="text" class="form-control" value="25/03/2018 14:30:00 - 17:00:00" style="width: 100px" aria-label="Small"
+                  aria-describedby="inputGroup-sizing-sm" disabled>
               </div>
               <div class="input-group-sm" style="margin-bottom: 10px;">
                 <label for="inputHoras">Total de horas</label>
@@ -311,9 +320,10 @@
         <!-- <strong>Total de horas: </strong> 02 horas e 30 min -->
         </span>
         <div class="modal-footer d-flex justify-content-center">
-          <button id="btn-confirm" class="btn btn-light">Aprovar</button>
-          <button id="btn-no-confirm" class="btn btn-light">Não Aprovar</button>
           <button id="btn-editar-solicitacao" class="btn btn-light">Editar</button>
+          <button id="btn-editar-solicitacao-motivo" class="btn btn-light">Editar</button>
+          <button id="btn-no-confirm" class="btn corBtnCancelar">Não Aprovar</button>
+          <button id="btn-confirm" class="btn corBtn">Aprovar</button>
         </div>
       </div>
     </div>
@@ -359,8 +369,8 @@
             <strong>Total de horas: </strong> 02 horas e 30 min
           </span>
           <div class="modal-footer d-flex justify-content-center">
-            <button id="btn-concluir-reserva" class="btn btn-light">Concluir Reserva</button>
-            <button id="btn-cancelar-reserva" class="btn btn-light">Cancelar Reserva</button>
+            <button id="btn-cancelar-reserva" class="btn corBtnCancelar">Cancelar Reserva</button>
+            <button id="btn-concluir-reserva" class="btn corBtn">Concluir Reserva</button>
           </div>
         </div>
       </div>
@@ -403,27 +413,48 @@
     </div>
   </div>
 
-   <!-- início modal alert confirmação n aprovar-->
-   <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="mi-modal-negar">
-      <div class="modal-dialog modal-sm" style="top: 82px; right: 10px;">
-        <div class="modal-content">
-          <div class="modal-header">
-            <!-- <h4 class="modal-title" id="myModalLabel">Confirmar</h4> -->
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <!-- <h4 class="modal-title" id="myModalLabel">Confirmar</h4> -->
-          </div>
-          <div class="modal-body">
-            <textarea name="" id="" cols="30" rows="5" placeholder="Informe um motivo para não aprovar"></textarea>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-light" id="modal-btn-enviar-motivo">Enviar</button>
-            <button type="button" class="btn btn-light" id="modal-btn-cancelar-enviar-motivo">Cancelar</button>
-          </div>
+  <!-- início modal alert confirmação n aprovar-->
+  <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="mi-modal-negar">
+    <div class="modal-dialog modal-sm" style="top: 82px; right: 10px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <h4 class="modal-title" id="myModalLabel">Confirmar</h4> -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <!-- <h4 class="modal-title" id="myModalLabel">Confirmar</h4> -->
+        </div>
+        <div class="modal-body">
+          <textarea name="" id="" cols="30" rows="5" placeholder="Informe o motivo para não aprovar"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" id="modal-btn-enviar-motivo">Enviar</button>
+          <button type="button" class="btn btn-light" id="modal-btn-cancelar-enviar-motivo">Cancelar</button>
         </div>
       </div>
     </div>
+  </div>
+  <!-- início modal alert confirmação editar -->
+  <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="mi-modal-editar-solicitacao-motivo">
+    <div class="modal-dialog modal-sm" style="top: 82px; right: 10px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <h4 class="modal-title" id="myModalLabel">Confirmar</h4> -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <!-- <h4 class="modal-title" id="myModalLabel">Confirmar</h4> -->
+        </div>
+        <div class="modal-body">
+          <textarea name="" id="" cols="30" rows="5" placeholder="Informe o motivo para edição"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" id="modal-btn-enviar-motivo-edicao">Enviar</button>
+          <button type="button" class="btn btn-light" id="modal-btn-cancelar-enviar-motivo-edicao">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="alert" role="alert" id="result"></div>
 
@@ -431,28 +462,12 @@
 
 </html>
 
-<!-- <script>
-    var modalConcluir = function (callback) {
-    $("#btn-concluir-reserva").on("click", function () {
-      $("#mi-modal-concluir").modal('show');
-      //$("#solicita2").hide();
-    });
-  };
-</script> -->
 <script>
-  // var modalNoConfirm = function (callback) {
-  //   $("#btn-no-confirm").on("click", function () {
-  //     $("#mi-modal").modal('show');
-  //   });
-  // };
-
-
-
   var modalConfirm = function (callback) {
-
     $("#btn-confirm").on("click", function () {
       $("#mi-modal").modal('show');
     });
+
     $("#btn-editar-solicitacao").on("click", function () {
       $("#inputData").prop('disabled', false);
       $("#inputRegistro").prop('disabled', false);
@@ -460,6 +475,25 @@
       $("#btn-data").prop('disabled', false);
       $("#btn-confirm").prop('disabled', true);
       $("#btn-no-confirm").prop('disabled', true);
+      $("#btn-editar-solicitacao-motivo").show();
+      $("#btn-editar-solicitacao").hide();
+    });
+    $("#btn-editar-solicitacao-motivo").on("click", function () {
+      $("#mi-modal-editar-solicitacao-motivo").modal('show');
+    });
+    $("#modal-btn-cancelar-enviar-motivo-edicao").on("click", function () {
+      $("#mi-modal-editar-solicitacao-motivo").modal('hide');
+    });
+    $("#modal-btn-enviar-motivo-edicao").on("click", function () {
+      $("#mi-modal-editar-solicitacao-motivo").modal('hide');
+      $("#inputData").prop('disabled', true);
+      $("#inputRegistro").prop('disabled', true);
+      $("#inputEquipamento").prop('disabled', true);
+      $("#btn-data").prop('disabled', true);
+      $("#btn-confirm").prop('disabled', false);
+      $("#btn-no-confirm").prop('disabled', false);
+      $("#btn-editar-solicitacao").show();
+      
     });
 
     $("#modal-btn-si").on("click", function () {
@@ -469,6 +503,12 @@
       $("#solicita").hide();
     });
 
+    $("#solicita").on("click", function () {
+      callback(true);
+      $("#btn-editar-solicitacao-motivo").hide();
+
+    });
+
     $("#modal-btn-no").on("click", function () {
       callback(false);
       $("#mi-modal").modal('hide');
@@ -476,8 +516,8 @@
 
     $("#btn-concluir-reserva").on("click", function () {
       $("#mi-modal-concluir").modal('show');
-      //$("#solicita2").hide();
     });
+
     $("#btn-no-confirm").on("click", function () {
       $("#mi-modal-negar").modal('show');
     });
@@ -487,7 +527,7 @@
     });
     $("#modal-btn-cancelar-enviar-motivo").on("click", function () {
       $("#mi-modal-negar").modal('hide');
-     
+
     });
 
   };

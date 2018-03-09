@@ -62,6 +62,10 @@ p.divider span.divider {
     background-color: rgb(163, 163, 163);
 }
 
+.card-footer{
+    background-color: rgb(163, 163, 163);
+}
+
 .btn-light {
     color: #ffffff;
     background-color: transparent;
@@ -79,6 +83,16 @@ button.btn-light.focus, .btn-light:focus {
 .corBtn{
     background-color: #5A1F76;
     color: #FFFFFF;
+}
+
+.corBtnCancelar{
+    background-color: rgb(163, 163, 163);
+    color: #FFFFFF;
+}
+
+.corBtnCarregar{
+    background-color: rgb(163, 163, 163);
+    color: #000000;
 }
 
 .badgeCustom {
