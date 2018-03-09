@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Projeto</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="../style_otavio.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <script>
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+
+  <script>
+    function changeValue() {
+      //alert(document.getElementById("equipamentoSelect").options[document.getElementById("equipamentoSelect").selectedIndex].value)
+      if (document.getElementById("equipamentoSelect").selectedIndex == 0) {
+        document.getElementById("grafico1").style.display = "block";
+        document.getElementById("grafico2").style.display = "none"
+      } else {
+        document.getElementById("grafico1").style.display = "none";
+        document.getElementById("grafico2").style.display = "block";
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light ">
+    <a class="navbar-brand" style="color:white" href="#">CTRL+</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item">
+        <a class="nav-link" href="home_gerenciador.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="reservas_gerenciador.html">Reservas </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="equipamento_gerenciador.html">Equipamentos</a>
+      </li>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a style="color:white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Relatórios
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="relatorio_equipamentos_gerenciador.html">Equipamentos</a>
+            <a class="dropdown-item" href="relatorio_reservas_gerenciador.html">Reservas </a>
+          </div>
+          <li>
+      </ul>
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a style="color:white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Nome Usuario
+          </a>
+          <div class="dropdown-menu" style="margin-left:-80px;" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="alterarSenha_gerenciador.html">Alterar Senha</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Sair</a>
+          </div>
+          <li>
+      </ul>
+    </form>
+  </nav>
+
+  <div class="container">
+    <div class="form-row align-self-center" style="margin-top:20px;">
+      <div class="col-md-2">
+        <label class="sr-only" for="inlineFormInputGroup">Username</label>
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <i class="fa fa-calendar"></i>
+            </div>
+          </div>
+          <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" id="inlineFormInputGroup" placeholder="08/03/2018">
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <label class="sr-only" for="inlineFormInputGroup">Username</label>
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <i class="fa fa-calendar"></i>
+            </div>
+          </div>
+          <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" id="inlineFormInputGroup" placeholder="08/04/2018">
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <select class="form-control" onchange="changeValue()" id="equipamentoSelect">
+          <option>Todos equipamentos</option>
+          <option>Plataforma Elevatória (157562)</option>
+          <option>Plataforma Elevatória (568128)</option>
+        </select>
+      </div>
+
+      <div class="col-md-2">
+
+        <a href="#" class="btn primary">
+          <i class="material-icons">search</i>
+        </a>
+      </div>
+
+    </div>
+    <div id="grafico1">
+      <div style="width:250px;height:250px;float:left;margin-top:30px;margin-left:50px;">
+        <canvas id="myChart"></canvas>
+      </div>
+
+      <div style="float:left;margin-left:80px;margin-top:30px;">
+        <table>
+          <tr>
+            <td>
+            </td>
+            <td style="text-align:center">
+              <span style="margin-left:5px;">
+                <b>Equipamento </b>
+              </span>
+            </td>
+            <td style="padding-left:25px">
+              <b>Horas de uso efetivo</b>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div style="background-color:rgb(74, 172, 197);width:30px;height:8px;border-radius:7px 7px 7px 7px;"></div>
+            </td>
+            <td style="text-align:center">
+              <span style="margin-left:4px;font-size:13px">Plataforma Elevatória (157562) </span>
+            </td>
+            <td style="text-align:center">3 horas </td>
+          </tr>
+          <tr>
+            <td>
+              <div style="background-color:rgb(247, 150, 71);width:30px;height:8px;border-radius:7px 7px 7px 7px;"></div>
+            </td>
+            <td style="text-align:center">
+              <span style="margin-left:4px;font-size:13px">Plataforma Elevatória (524986)</span>
+            </td>
+            <td style="text-align:center">10 horas </td>
+          </tr>
+          <tr>
+            <td>
+              <div style="background-color:rgb(79, 129, 188);width:30px;height:8px;border-radius:7px 7px 7px 7px;"></div>
+            </td>
+            <td style="text-align:center">
+              <span style="margin-left:4px;font-size:13px">Plataforma Elevatória (468457) </span>
+            </td>
+            <td style="text-align:center">5 horas </td>
+          </tr>
+          <tr>
+            <td>
+              <div style="background-color:rgb(192, 80, 78);width:30px;height:8px;border-radius:7px 7px 7px 7px;"></div>
+            </td>
+            <td style="text-align:center">
+              <span style="margin-left:4px;font-size:13px">Plataforma Elevatória (955456) </span>
+            </td>
+            <td style="text-align:center">2 horas </td>
+          </tr>
+          <tr>
+            <td>
+              <div style="background-color:rgb(155, 187, 88);width:30px;height:8px;border-radius:7px 7px 7px 7px;"></div>
+            </td>
+            <td style="text-align:center">
+              <span style="margin-left:4px;font-size:13px">Plataforma Elevatória (345885)</span>
+            </td>
+            <td style="text-align:center">20 horas </td>
+          </tr>
+          <tr>
+            <td>
+              <div style="background-color:rgb(128, 100, 161);width:30px;height:8px;border-radius:7px 7px 7px 7px;"></div>
+            </td>
+            <td style="text-align:center">
+              <span style="margin-left:4px;font-size:13px">Plataforma Elevatória (234546) </span>
+            </td>
+            <td style="text-align:center">30 horas </td>
+          </tr>
+        </table>
+
+        <div style="margin-top:20px;">
+          <b> Total de horas de uso efetivo:</b> 70 horas
+          <br>
+          <b>Total de horas no período:</b> 150 horas
+        </div>
+      </div>
+    </div>
+
+    <div id="grafico2" style="display:none">
+        <div style="width:250px;height:250px;float:left;margin-top:30px;margin-left:50px;">
+          <canvas id="myChart2"></canvas>
+        </div>
+  
+        <div style="float:left;margin-left:80px;margin-top:30px;">
+          <table>
+            <tr>
+              <td>
+              </td>
+              <td style="">
+                <span style="margin-left:5px;">
+                  <b>Equipamento </b>
+                </span>
+              </td>
+              <td style="padding-left:15px">
+                <b>Horas</b>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div style="background-color:rgb(74, 172, 197);width:30px;height:8px;border-radius:7px 7px 7px 7px;"></div>
+              </td>
+              <td style="">
+                <span style="margin-left:4px;font-size:13px">Total de Horas de Uso Efetivo </span>
+              </td>
+              <td style="padding-left:15px">25 horas </td>
+            </tr>
+            <tr>
+              <td>
+                <div style="background-color:rgb(247, 150, 71);width:30px;height:8px;border-radius:7px 7px 7px 7px;"></div>
+              </td>
+              <td style="">
+                <span style="margin-left:4px;font-size:13px">Total de Horas no Período</span>
+              </td>
+              <td style="padding-left:15px">70  horas </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+  </div>
+
+  <div style="clear:both"></div>
+
+  <div style="margin-bottom:30px;"></div>
+  <div class="container">
+      <script>
+          var ctx = document.getElementById('myChart').getContext('2d');
+          var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'pie',
+    
+            // The data for our dataset
+            data: {
+              labels: ["Plataforma Elevatória", "Guindaste", "Empilhadeira", "Trator", "Caminhão", "Betoneira"],
+              datasets: [{
+                label: "My First dataset",
+                backgroundColor: ['rgb(74, 172, 197)', 'rgb(247, 150, 71)', 'rgb(79, 129, 188)', 'rgb(192, 80, 78)', 'rgb(155, 187, 88)'
+                  , 'rgb(128, 100, 161)'],
+                data: [3, 10, 5, 2, 20, 30]
+    
+              }]
+            },
+    
+            // Configuration options go here
+            options: { legend: { position: 'right', display: false } }
+    
+          });
+        </script>
+
+<script>
+    var ctx = document.getElementById('myChart2').getContext('2d');
+    var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'pie',
+
+      // The data for our dataset
+      data: {
+        labels: ["Horas Efetivas", "Hora no Período"],
+        datasets: [{
+          label: "My First dataset",
+          backgroundColor: ['rgb(74, 172, 197)', 'rgb(247, 150, 71)'],
+          data: [25,70]
+
+        }]
+      },
+
+      // Configuration options go here
+      options: { legend: { position: 'right', display: false } }
+
+    });
+  </script>
+    <h2 style="margin-top:20px;margin-bottom:20px;">Equipamentos</h2>
+    <table class="table" style="text-align: center;">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome Equipamento
+            <i class="fas fa-filter"></i>
+          </th>
+          <th scope="col">Registro
+            <i class="fas fa-filter"></i>
+          </th>
+          <th scope="col">Modelo
+            <i class="fas fa-filter"></i>
+          </th>
+          <th scope="col">Tipo
+            <i class="fas fa-filter"></i>
+          </th>
+          <th scope="col">Situação
+            <i class="fas fa-filter"></i>
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Plataforma Elevatória</td>
+          <td>121210</td>
+          <td>Tesoura</td>
+          <td>Plataforma Elevatória</td>
+          <td  style="width:200px;">
+            <select class="form-control">
+              <option>Disponível</option>
+              <option>Não disponível</option>
+            </select>
+          </td>
+          <td class="pointer" data-toggle="modal" data-target="#exampleModal">
+            <i class="fas fa-clipboard-list" data-toggle="tooltip" title="Mais detalhes"></i>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Plataforma Elevatória</td>
+          <td>135880</td>
+          <td>Tesoura</td>
+          <td>Plataforma Elevatória</td>
+          <td style="width:200px;">
+            <select class="form-control" >
+              <option>Disponível</option>
+              <option selected>Não disponível</option>
+            </select>
+          </td>
+          <td class="pointer" data-toggle="modal" data-target="#exampleModal">
+            <i class="fas fa-clipboard-list" data-toggle="tooltip" title="Mais detalhes"></i>
+          </td>
+        </tr>
+    </table>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Mais detalhes</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <label>
+            Nome Equipamento: Plataforma Elevatória
+          </label>
+          <br>
+          <label>
+            Registro: 150212
+          </label>
+          <br>
+          <label>
+            Modelo: Tesoura
+          </label>
+          <br>
+          <label>
+            Tipo: Plataforma Elevatória
+          </label>
+          <br>
+          <label>
+            Situação: Disponível
+          </label>
+          <br>
+          <br>
+          <label>
+            Onde e com quem a chave se encontra: Supervisor da Aciária
+          </label>
+
+          <label>
+            Equipamento está em uso por: Ciclano da Silva
+          </label>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <!--button type="button" class="btn btn-primary">Save changes</button-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
