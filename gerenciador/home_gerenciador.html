@@ -21,58 +21,63 @@
     crossorigin="anonymous"></script>
 </head>
 
-<body>
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light ">
-    <a class="navbar-brand" style="color:white" href="#">CTRL+</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light ">
+  <a class="navbar-brand" style="color:white" href="#">CTRL+</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <ul class="navbar-nav mr-auto">
+
+    <li class="nav-item">
+      <a class="nav-link" href="home_gerenciador.html">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="reservas_gerenciador.html">Reservas</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="equipamento_gerenciador.html">Equipamentos</a>
+    </li>
+
     <ul class="navbar-nav mr-auto">
-
-      <li class="nav-item">
-        <a class="nav-link" href="home_gerenciador.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="reservas_gerenciador.html">Reservas</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="equipamento_gerenciador.html">Equipamentos</a>
-      </li>
-
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item dropdown">
-          <a style="color:white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Relatórios
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="relatorio_equipamentos_gerenciador.html">Equipamentos</a>
-            <a class="dropdown-item" href="relatorio_reservas_gerenciador.html">Reservas </a>
-          </div>
-          <li>
-      </ul>
+      <li class="nav-item dropdown">
+        <a style="color:white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Relatórios
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="relatorio_equipamentos_gerenciador.html">Equipamentos</a>
+          <a class="dropdown-item" href="relatorio_reservas_gerenciador.html">Reservas </a>
+        </div>
+        <li>
     </ul>
+  </ul>
 
-    <form class="form-inline my-2 my-lg-0">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item dropdown">
-          <a style="color:white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Nome Usuario
-          </a>
-          <div class="dropdown-menu" style="margin-left:-80px;" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="alterarSenha_gerenciador.html">Alterar Senha</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../login.html">Sair</a>
-          </div>
-          <li>
-      </ul>
-    </form>
-  </nav>
+  <form class="form-inline my-2 my-lg-0">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a style="color:white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Nome Usuario
+        </a>
+        <div class="dropdown-menu" style="margin-left:-80px;" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="alterarSenha_gerenciador.html">Alterar Dados</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="../login.html">Sair</a>
+        </div>
+        <li>
+    </ul>
+  </form>
+</nav>
+
+<body>
+  
   <div class="container">
+
     <div class="form-row col-md-12" style="margin-top: 28px">
-      <div class="form-row col-md-6" style=" height: 500px">
+
+      <div class="form-row col-md-6" >
+
         <div class="card card-home">
           <div class="card-header">
             <h3>Novas Solicitações</h3>
@@ -155,7 +160,7 @@
               </a>
             </div>
             <div class="card-footer text-muted text-center">
-              <button class="btn btn-light">Carregar mais</button>
+              <button class="btn corBtnCarregar">Carregar mais</button>
             </div>
           </div>
         </div>
@@ -245,11 +250,12 @@
               </a>
             </div>
             <div class="card-footer text-muted text-center">
-              <button class="btn btn-light">Carregar mais</button>
+              <button class="btn corBtnCarregar">Carregar mais</button>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 
