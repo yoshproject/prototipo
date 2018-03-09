@@ -21,10 +21,35 @@
         crossorigin="anonymous"></script>
         
 
+    <script type="text/javascript">	
+        function valida_envio(){
+            var valorEmail = document.getElementById("inputEmail").value;
+            var formulario  = document.getElementById("formulario");
+            if( valorEmail.length > 1 ){
+                if(valorEmail === "admin@email.com"){
+                    //alert("ADMIN");
+                    window.location.href = "/administrador/index_admin.html";
+                }
+                if(valorEmail === "gerenciador@email.com"){
+                    alert("GERENCIADOR");
+                }
+                if(valorEmail === "solicitante@email.com"){
+                    alert("SOLICITANTE");
+                }
+
+            }else{
+               alert("Preencha o campo");
+            }
+          }
+        
+    </script>
+
 </head>
 
+
+
 <body class="text-center">
-    <form class="form-signin">
+    <form class="form-signin" id="formulario">
         <!--img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"-->
         <h1 class="h3 mb-3 font-weight-normal">Login</h1>
         <br>
@@ -38,7 +63,7 @@
                 <input type="checkbox" value="remember-me"> Lembrar Usuário
             </label>
         </div>
-        <button class="btn btn-lg btn-block" style="background-color:#5A1F76; color:white" type="submit">Entrar</button>
+        <button class="btn btn-lg btn-block" style="background-color:#5A1F76; color:white" type="submit" value="Enviar" onClick="valida_envio()">Entrar</button>
         <p class="mt-5 mb-3 text-muted">&copy;2018</p>
     </form>
 </body>
