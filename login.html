@@ -27,14 +27,13 @@
             var formulario  = document.getElementById("formulario");
             if( valorEmail.length > 1 ){
                 if(valorEmail === "admin@email.com"){
-                    //alert("ADMIN");
-                    window.location.href = "/administrador/index_admin.html";
+                    window.location.href = "administrador/index_admin.html";
                 }
                 if(valorEmail === "gerenciador@email.com"){
-                    alert("GERENCIADOR");
+                    window.location.href = "gerenciador/home_gerenciador.html";
                 }
                 if(valorEmail === "solicitante@email.com"){
-                    alert("SOLICITANTE");
+                    window.location.href = "solicitante/reserva-solicitante.html";
                 }
 
             }else{
@@ -58,11 +57,6 @@
         <label for="inputPassword" class="sr-only">Senha</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
         <br>
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" value="remember-me"> Lembrar Usuário
-            </label>
-        </div>
         <button class="btn btn-lg btn-block" style="background-color:#5A1F76; color:white" type="submit" value="Enviar" onClick="valida_envio()">Entrar</button>
         <p class="mt-5 mb-3 text-muted">&copy;2018</p>
     </form>
